@@ -1,5 +1,6 @@
 package com.walmart.hack.discount.model;
 
+import java.math.BigDecimal;
 import java.time.Instant;
 
 import javax.persistence.Column;
@@ -33,6 +34,9 @@ public class Deal {
   private Integer event;
   private Boolean status;
   private Instant expiration;
+
+  private BigDecimal oldPrice;
+  private BigDecimal newPrice;
 
   @CreatedDate
   @Column(updatable = false)
