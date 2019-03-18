@@ -34,6 +34,12 @@
     </dependency>
 
     <dependency>
+      <groupId>com.google.firebase</groupId>
+      <artifactId>firebase-admin</artifactId>
+      <version>6.8.0</version>
+    </dependency>
+
+    <dependency>
       <groupId>io.springfox</groupId>
       <artifactId>springfox-swagger2</artifactId>
       <version>${swagger.version}</version>
@@ -81,5 +87,20 @@
       </plugin>
     </plugins>
   </build>
+
+  <repositories>
+    <repository>
+      <id>maven</id>
+      <url>https://repo.maven.apache.org/maven2/</url>
+    </repository>
+    <repository>
+      <id>google</id>
+      <url>https://maven.google.com/</url>
+    </repository>
+    <repository>
+      <id>spring</id>
+      <url>http://repo.spring.io/plugins-release/</url>
+    </repository>
+  </repositories>
 
 </project>
