@@ -9,6 +9,7 @@ import javax.persistence.EntityListeners;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 import org.hibernate.annotations.Where;
 import org.springframework.data.annotation.CreatedDate;
@@ -18,19 +19,21 @@ import com.walmart.hack.discount.deal.DealListener;
 import lombok.Data;
 
 @Entity
-@Where(clause = "status = true and expiration >= current_timestamp()")
+@Table(schema = "deals")
+@Where(clause = "status = true and expiration >= current_timestamp")
 @EntityListeners(DealListener.class)
 @Data
 public class Deal {
 
   @Id
-  @GeneratedValue(strategy = GenerationType.AUTO)
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private long id;
 
   private Integer store;
   private Long item;
   private Integer department;
   private Integer category;
+  @Column(name = "evt")
   private Integer event;
   private Boolean status;
   private Instant expiration;
