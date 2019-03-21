@@ -36,13 +36,13 @@
     <dependency>
       <groupId>org.postgresql</groupId>
       <artifactId>postgresql</artifactId>
-      <version>42.2.1</version>
+      <version>42.1.4</version>
     </dependency>
 
     <dependency>
       <groupId>com.google.firebase</groupId>
       <artifactId>firebase-admin</artifactId>
-      <version>6.8.0</version>
+      <version>6.7.0</version>
     </dependency>
 
     <dependency>
@@ -57,11 +57,11 @@
       <version>${swagger.version}</version>
     </dependency>
 
-    <dependency>
-      <groupId>org.zalando</groupId>
-      <artifactId>logbook-spring-boot-starter</artifactId>
-      <version>1.5.0</version>
-    </dependency>
+    <!--<dependency>-->
+      <!--<groupId>org.zalando</groupId>-->
+      <!--<artifactId>logbook-spring-boot-starter</artifactId>-->
+      <!--<version>1.4.0</version>-->
+    <!--</dependency>-->
 
     <dependency>
       <groupId>org.springframework.boot</groupId>

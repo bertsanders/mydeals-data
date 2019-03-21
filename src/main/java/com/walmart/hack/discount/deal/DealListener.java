@@ -8,7 +8,6 @@ import javax.persistence.PostPersist;
 
 import org.springframework.stereotype.Component;
 
-import com.google.firebase.FirebaseOptions;
 import com.google.firebase.messaging.AndroidConfig;
 import com.google.firebase.messaging.AndroidNotification;
 import com.google.firebase.messaging.FirebaseMessaging;
@@ -62,9 +61,9 @@ public class DealListener {
         .setToken("eG5khVZyWuc:APA91bHRkOqQJZ9PGfzAnQWIWLg3D6gmPsNFaTMrcevArsBI2LwaQyEp7fXIPwdrXfGN-yaE3Ecrcc5bXHUZvAxAG_-hbP9E1L5rAWV7mEGL0OeYDcLcGq_TF6u2C1af8jB4YCN7Pd6d")
         .build();
 
-    String response = FirebaseMessaging.getInstance().send(message);
+   // String response = FirebaseMessaging.getInstance().send(message);
 
-    log.info("PostPersist: " + response);
+   // log.info("PostPersist: " + response);
   }
 
 }

@@ -5,21 +5,21 @@ import org.springframework.stereotype.Service;
 
 import com.walmart.hack.discount.model.Device;
 import com.walmart.hack.discount.model.NotFoundException;
-import com.walmart.hack.discount.model.repos.DeviceRepo;
+import com.walmart.hack.discount.model.repo.DeviceRepo;
 
 @Service
 public class DeviceService {
 
   @Autowired
-   DeviceRepo deviceRepo;
+  DeviceRepo deviceRepo;
 
-  public String addDevice(Device device){
+  public Long addDevice(Device device) {
     Device deviceCreated = deviceRepo.save(device);
     return deviceCreated.getDeviceId();
   }
 
-  public Device getDevice(String deviceId) {
-    Device device =  deviceRepo.findById(deviceId).orElseThrow(() -> new NotFoundException("Unable to find deviceId:"+ deviceId));
+  public Device getDevice(Long deviceId) {
+    Device device = deviceRepo.findById(deviceId).orElseThrow(() -> new NotFoundException("Unable to find deviceId:" + deviceId));
     return device;
   }
 }
