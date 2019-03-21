@@ -18,12 +18,12 @@ public class DeviceController {
   @Autowired
   DeviceService deviceService;
 
-  @PostMapping("/register")
+  @PostMapping("/")
   public Long addDevice(Device device) {
     return deviceService.addDevice(device);
   }
 
-  @GetMapping()
+  @GetMapping("/")
   public Device getDevice(Long deviceId) {
     return deviceService.getDevice(deviceId);
   }

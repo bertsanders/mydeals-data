@@ -21,7 +21,7 @@ public class DeviceSubscriptionController {
   @Autowired
   SubscriptionService subscriptionService;
 
-  @PostMapping("/add")
+  @PostMapping("/")
   public Long addDevice(DeviceSubscription deviceSubscription) {
     return subscriptionService.addSubscription(deviceSubscription);
   }
