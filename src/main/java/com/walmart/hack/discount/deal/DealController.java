@@ -19,7 +19,6 @@ import lombok.RequiredArgsConstructor;
 @RestController
 @RequestMapping("/deal")
 public class DealController {
-
   @NonNull
   private DealRepository dealRepository;
 
