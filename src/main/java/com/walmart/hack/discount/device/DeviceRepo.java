@@ -1,4 +1,4 @@
-package com.walmart.hack.discount.model.repo;
+package com.walmart.hack.discount.device;
 
 import java.util.Optional;
 

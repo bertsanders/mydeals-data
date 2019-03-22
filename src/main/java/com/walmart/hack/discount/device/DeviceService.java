@@ -1,11 +1,10 @@
-package com.walmart.hack.discount.service;
+package com.walmart.hack.discount.device;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.walmart.hack.discount.model.Device;
 import com.walmart.hack.discount.model.NotFoundException;
-import com.walmart.hack.discount.model.repo.DeviceRepo;
 
 @Service
 public class DeviceService {

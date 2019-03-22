@@ -1,16 +1,13 @@
-package com.walmart.hack.discount.service;
+package com.walmart.hack.discount.subscription;
 
 import java.util.List;
-import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.walmart.hack.discount.model.Device;
-import com.walmart.hack.discount.model.DeviceNotFoundException;
 import com.walmart.hack.discount.model.DeviceSubscription;
-import com.walmart.hack.discount.model.repo.DeviceRepo;
-import com.walmart.hack.discount.model.repo.DeviceSubscriptionRepo;
+import com.walmart.hack.discount.device.DeviceRepo;
 
 @Service
 public class SubscriptionService {

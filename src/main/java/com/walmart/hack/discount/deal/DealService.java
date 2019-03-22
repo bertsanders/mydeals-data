@@ -21,7 +21,7 @@ import com.google.firebase.messaging.Message.Builder;
 import com.google.firebase.messaging.Notification;
 import com.walmart.hack.discount.model.Deal;
 import com.walmart.hack.discount.model.DeviceSubscription;
-import com.walmart.hack.discount.service.SubscriptionService;
+import com.walmart.hack.discount.subscription.SubscriptionService;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
