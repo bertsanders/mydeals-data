@@ -13,13 +13,13 @@ public class DeviceService {
   @Autowired
   DeviceRepo deviceRepo;
 
-  public Long addDevice(Device device) {
+  public Device addDevice(Device device) {
     Device deviceCreated = deviceRepo.save(device);
-    return deviceCreated.getDeviceId();
+    return deviceCreated;
   }
 
-  public Device getDevice(Long deviceId) {
-    Device device = deviceRepo.findById(deviceId).orElseThrow(() -> new NotFoundException("Unable to find deviceId:" + deviceId));
+  public Device getDevice(String token) {
+    Device device = deviceRepo.findById(token).orElseThrow(() -> new NotFoundException("Unable to find deviceId:" + token));
     return device;
   }
 }

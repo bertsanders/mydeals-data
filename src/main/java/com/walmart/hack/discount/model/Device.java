@@ -21,10 +21,6 @@ import lombok.NoArgsConstructor;
 public class Device {
 
   @Id
-  @JsonIgnore
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long deviceId;
-
   private String token;
 
   @Column(name = "vers")
