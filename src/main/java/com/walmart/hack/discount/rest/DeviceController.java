@@ -19,13 +19,13 @@ public class DeviceController {
   DeviceService deviceService;
 
   @PostMapping("/")
-  public Long addDevice(Device device) {
+  public Device addDevice(Device device) {
     return deviceService.addDevice(device);
   }
 
   @GetMapping("/")
-  public Device getDevice(Long deviceId) {
-    return deviceService.getDevice(deviceId);
+  public Device getDevice(String token) {
+    return deviceService.getDevice(token);
   }
 
 
