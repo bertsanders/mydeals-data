@@ -10,4 +10,8 @@ public interface DeviceSubscriptionRepo extends CrudRepository<DeviceSubscriptio
 
   List<DeviceSubscription> findAllByToken(String token);
 
+  List<DeviceSubscription> findAllByStoreAndDepartmentAndCategoryIsNull(int store, int department);
+
+  List<DeviceSubscription> findAllByStoreAndDepartmentAndCategory(int store, int department, int category);
+
 }

@@ -1,6 +1,7 @@
 package com.walmart.hack.discount.service;
 
 import java.util.List;
+import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -28,6 +29,12 @@ public class SubscriptionService {
   public List<DeviceSubscription> getSubscriptionByToken(String token) {
     return deviceSubscriptionRepo.findAllByToken(token);
 
+  }
+
+  public List<DeviceSubscription> findMatchingSubscriptions(int store, int department, int category) {
+    List<DeviceSubscription> subscriptions = deviceSubscriptionRepo.findAllByStoreAndDepartmentAndCategory(store, department, category);
+    subscriptions.addAll(deviceSubscriptionRepo.findAllByStoreAndDepartmentAndCategoryIsNull(store, department));
+    return subscriptions;
   }
 
 }

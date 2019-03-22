@@ -20,16 +20,16 @@ import lombok.RequiredArgsConstructor;
 @RequestMapping("/deal")
 public class DealController {
   @NonNull
-  private DealRepository dealRepository;
+  private DealService dealService;
 
   @PostMapping("/")
   public Deal createDeal(@RequestBody Deal deal, @RequestParam("timeToLive") long timeToLiveSeconds) {
     deal.setExpiration(Instant.now().plusSeconds(timeToLiveSeconds));
-    return dealRepository.save(deal);
+    return dealService.createDeal(deal, timeToLiveSeconds);
   }
 
   @GetMapping("/")
   public Page<Deal> getAllDeals(Pageable pageable) {
-    return dealRepository.findAll(pageable);
+    return dealService.getAllDeals(pageable);
   }
 }

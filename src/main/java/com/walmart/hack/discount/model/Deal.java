@@ -15,13 +15,13 @@ import org.hibernate.annotations.Where;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 
-import com.walmart.hack.discount.deal.DealListener;
+import com.walmart.hack.discount.deal.DealService;
 import lombok.Data;
 
 @Entity
 @Table(schema = "deals")
 @Where(clause = "status = true and expiration >= current_timestamp")
-@EntityListeners(DealListener.class)
+@EntityListeners(DealService.class)
 @Data
 public class Deal {
 

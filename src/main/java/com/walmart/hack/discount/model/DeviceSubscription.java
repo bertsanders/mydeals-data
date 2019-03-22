@@ -25,7 +25,7 @@ public class DeviceSubscription {
 
   private String token;
   private Integer department;
-  private Integer category;
+  private Integer category; //category is sub-grouping of department
   private Integer store;
 
 }
