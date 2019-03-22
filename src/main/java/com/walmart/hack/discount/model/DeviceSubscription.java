@@ -19,7 +19,6 @@ import lombok.NoArgsConstructor;
 public class DeviceSubscription {
 
   @Id
-  @JsonIgnore
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
